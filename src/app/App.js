@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import Navigation from '../components/navigation/Navigation';
+import Content from '../components/content/Content';
 import Login from '../components/login/Login';
 import './App.css';
 
 class App extends Component {
-  isLogged = true;
+  isLogged = false;
   render() {
     return (this.isLogged) 
-    ? (<Login />)
-      : ( 
+    ? ( 
         <div className="App">
-          <Navigation />
+          <Content />
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
         </div>
-      );
+      ):(<Login />);
   }
 }
 
