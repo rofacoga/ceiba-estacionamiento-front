@@ -7,9 +7,11 @@ class Content extends Component {
     return ( 
         <div className="Content">
           <Navigation />
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
+          <div className="ContentBody">
+            <p className="App-intro">
+              To get started, edit <code>src/App.js</code> and save to reload.
+            </p>
+          </div>
         </div>
       );
   }

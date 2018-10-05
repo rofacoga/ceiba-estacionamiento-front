@@ -5,16 +5,14 @@ import './App.css';
 
 class App extends Component {
   isLogged = false;
+
+  constructor(){
+    super();
+    this.context={urlConnect: 'http://localhost:8080/'};
+  }
+
   render() {
-    return (this.isLogged) 
-    ? ( 
-        <div className="App">
-          <Content />
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
-        </div>
-      ):(<Login />);
+    return (this.isLogged) ? <Content />:<Login />;
   }
 }
 
